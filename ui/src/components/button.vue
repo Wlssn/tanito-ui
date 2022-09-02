@@ -1,4 +1,8 @@
 <template>
+  <!-- 
+    设计: 悬浮的时候颜色应该变浅  在点击的时候颜色再变深
+
+  -->
   <button id="ssButton" class="ss-button" :class="[`ss-button--${type}`]" @click="clickEvent">
     <span class="fontStyle">
       <slot></slot>
@@ -10,9 +14,20 @@
 export default {
   name: 'ssButton',
   props: {
+    // 传入按钮类型 primary | warning | plain | success | 
     type: {
       type: String,
-      default: 'primary'
+      default: 'plain'
+    },
+    // 是否需要圆角 true | false 
+    roundCorner: {
+      type: Boolean,
+      default: false
+    },
+    // 是否为圆形图标按钮
+    circle: {
+      type: Boolean,
+      default: false
     }
   },
   data () {
@@ -45,11 +60,13 @@ export default {
   -moz-user-select: none;
   -webkit-user-select: none;
   -ms-user-select: none;
-  &:hover,
-  &:focus {
-    // color: rgb(64, 158, 255);
-    border: #409eff 1px solid;
+  &:hover {
+    // border: #409eff 1px solid;
     background-color: rgba(64, 158, 255, 0.8);
+  }
+  &:active {
+    // border: #409eff 1px solid;
+    background-color: rgb(56, 140, 224);    
   }
 }
 
