@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "myself ui lib",
   "author": "Tanito <204342689@qq.com>",
+  "license": "MIT",
   "private": false,
   "main": "dist/tanito-ui.umd.min.js",
   "scripts": {
