@@ -2,6 +2,7 @@ const path = require('path') // 引用path模块
 const HtmlWebpackPlugin = require('html-webpack-plugin') // 引入html-webpack-plugin
 
 module.exports = {
+  lintOnSave: false,
   // 这里是commrnt.js语法
   // 入口文件
   entry: './src/main.js',

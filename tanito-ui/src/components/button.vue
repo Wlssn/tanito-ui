@@ -19,7 +19,7 @@
 export default {
   name: 'ssButton',
   props: {
-    // 传入按钮类型 primary | plain | success | danger
+    // 传入按钮类型 main | plain | success | danger
     type: {
       type: String,
       default: 'plain'
@@ -94,7 +94,7 @@ export default {
     border-color: #a6d4ff;
   }
 }
-.ss-button--primary {
+.ss-button--main {
   &:hover {
     background-color: rgb(66, 161, 255, 0.8);
   }
@@ -141,7 +141,7 @@ export default {
 
 .size {
   font-size: 18px;
-  font-family: serif, cursive;
+  font-family: Times New Roman, serif, cursive;
 }
 
 // 加上icon和文本的距离

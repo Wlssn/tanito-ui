@@ -1,6 +1,7 @@
-# ui
+# ui | vue2-element-ui
 
 > myself ui lib
+> 二次封装element 业务组件库
 
 ## Build Setup
 
