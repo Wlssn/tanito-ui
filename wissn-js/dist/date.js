@@ -29,21 +29,22 @@ function getDate(date) {
  */
 function getSpecifyDate(length, direction, date = Date.now()) {
   let result = []
-  for (var i = 0; i < length; i++) {
+  for (let i = 1; i <= length; i++) {
     direction ?
     result.push(
-      new Date(new Date(date).setDate(new Date().getDate() + i)).toLocaleDateString().replaceAll('/', '-')
+      new Date(new Date(date).setDate(new Date().getDate() + i)).toLocaleDateString().replaceAll('/', '-').split('-').map(item => +item < 10 ? item = 0 + item: item).join('-')
     )
     :
     result.push(
-      new Date(new Date(date).setDate(new Date().getDate() - i)).toLocaleDateString().replaceAll('/', '-')
+      new Date(new Date(date).setDate(new Date().getDate() - i)).toLocaleDateString().replaceAll('/', '-').split('-').map(item => +item < 10 ? item = 0 + item: item).join('-')
     )
   }
   return direction ? result : result.reverse()
 }
-// console.log(getSpecifyDate(7, 1, '2022-08-02'))
 
 module.exports = {
   getDate,
   getSpecifyDate
 }
+let r = '2023-1-9'.split('-').map(item => +item < 10 ? item = 0 + item: item)
+console.log(r)
